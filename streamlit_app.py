@@ -1,6 +1,10 @@
 import streamlit as st
+from PIL import Image
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+st.title("🎈 テスト（画像表示アプリ）")
+
+uploaded_file = st.file_uploader("画像を選択してください", type=["png", "jpg", "jpeg"])
+
+max_size = (300, 300)
+image.thumbnail(max_size)
+original_width, original_height = image.size
